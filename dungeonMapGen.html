@@ -3,8 +3,8 @@
 <head>
 	<meta charset='utf-8'>
 	<title>Dungeon Generator</title>
-	<script src='libs/jquery.js'></script>
-	<script src='dungeonGen.js'></script>
+	<script type='text/javascript' src='js/libs/jquery.js'></script>
+	<script type='text/javascript'src='js/dungeonGen.js'></script>
 
 </head>
 
@@ -12,48 +12,21 @@
 
     <table>
     <tr>
-        <th>Dungeon Size</th>
-        <th>Room Area</th>
-        <th>Room Density</th>
+        <th>Number of Rooms:</th>
+        <th>Number of Deadends:</th>
     </tr>
-    <tr>
-        <td>
-        	<form name="sizePick">
-                <input type='radio' name='size' value="small" checked>Small <br>
-                <input type='radio' name='size' value="medium">Medium <br>
-                <input type='radio' name='size' value="large">Large
-            </form>
-        </td>
-        <td>
-            <form name="roomStyle">
-                <input type='radio' name='roomArea' value="few" checked>Low<br>
-                <input type='radio' name='roomArea' value="mid">Medium <br>
-                <input type='radio' name='roomArea' value="big">High 
-            </form>
-        </td>
-        <td>
-            <form name="degBranch">
-                <input type='radio' name='density' value="little" checked>Low Room Density<br>
-                <input type='radio' name='density' value="medium">Medium Room Density<br>
-                <input type='radio' name='density' value="high">High Room Density
-            </form>
-        </td>
-    </tr>
+	<tr>
+	<td>
+		<input type='text' id='roomNum'>
+	</td>
+	<td>
+		<input type='text' id='deadEnds'>
+	</td>
+	</tr>
     </table>
-
-    <input type='checkbox' name='creativeMode' class='creativeModeOption' id='creativeMode' style='display:none'>Edit Mode:
-    <span id='creMode' style='display:none'>
-        <input type='radio' name='edit' value='add' checked>Add Tile
-        <input type='radio' name='edit' value='erase'>Erase Tile
-    </span>
-    <br>
 	<canvas id="dungeonMap" width="1024" height="780"></canvas>
 
 	<br />
-    <button id="dungButton">Generate a dungeon!</button>
-    <button id="addButton">Add more tiles!</button>
-    <button id='undoButton'>Undo Last Addition</button>
-
-
+	<button id='room2'>Generate a Dungeon</button>
 </body>
 </html>
