@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Description Generator</title>
+	<script type='text/javascript' src='js/libs/jquery.js'></script>
+	<script type='text/javascript' src='js/libs/q.js'></script>
+	<script type='text/javascript' src='js/descriptionGen.js'></script>
+
+</head>
+<body>
+	<p>Select a character or a room type:</p>
+	<button id='NPCButton'>Character</button>
+	<button id='roomButton'>Room Type</button>
+	<br>
+	<select id='Race' style='display:none'>
+		<option value='Human'>Human</option>
+		<option value='Dwarf'>Dwarf</option>
+		<option value='Elf'>Elf</option>
+		<option value='Gnome'>Gnome</option>
+		<option value='Halfling'>Halfling</option>
+		<option value='Orc'>Orc</option>
+	</select>
+	<select id='RoomType' style='display:none'>
+		<option value='Tavern'>Tavern</option>
+		<option value='Cavern'>Natural Cavern</option>
+		<option value='Lair'>Enemy Lair</option>
+		<option value='Noble'>Noble Building</option>
+		<option value='Wizard'>Wizard's Abode</option>
+	</select>
+	<br><br>
+	<button id='submitRead'>Generate Description!</button>
+
+	<table id='results' border='1'></table>
+</body>
+</html>
